@@ -115,6 +115,7 @@ li:hover,
     border-radius: 1rem;
     background-color: var(--background-color);
     border: 0.05rem solid var(--header-color);
+    padding: 0.3rem 1rem;
 }
 
 .search-bar:focus {
