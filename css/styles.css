@@ -78,6 +78,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 8fr;
+    gap: 1rem;
 }
 
 /* Header */
@@ -193,7 +194,7 @@ li:hover,
     color:white;
     display: grid;
     align-items: center;
-    grid-template-rows: 2fr repeat(7, 1fr) 4fr repeat(3, 1fr);
+    grid-template-rows: 3fr repeat(7, 1fr) 10fr repeat(3, 1fr);
     padding-left: 1.5rem;
 }
 
@@ -276,8 +277,85 @@ li:hover,
     background-image: url(../assets/icons/help-box.svg);
 }
 
+
+/* Content */
+
 .content {
-    background-color: bisque;
+    background-color: var(--background-color);
     height: 100%;
     width: 100%;
+    display: grid;
+    grid-template-columns: 8fr 3fr;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.projects {
+    grid-column: 1 / 2;
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: max-content;
+    gap: 1rem;
+}
+
+.projects > .title,
+.misc .title {
+    grid-column: 1 / -1;
+    font-size: calc(0.9rem + 0.6vw);
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-rows: 30% max-content max-content;
+    gap: 1rem;
+}
+.card .image {
+    border-radius: 0.5rem;
+    background-color: black;
+
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+#favorite {
+    background-image: url(../assets/icons/star.svg);
+}
+
+#watch {
+    background-image: url(../assets/icons/eye-check.svg);
+}
+
+#share {
+    background-image: url(../assets/icons/source-fork.svg);
+}
+
+.misc {
+    grid-column: 2 / 3;
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-rows: repeat(auto-fit, min-content)
+}
+
+
+.announcements {
+    background-color: pink;
+}
+
+.trending {
+    background-color: pink;
 }
